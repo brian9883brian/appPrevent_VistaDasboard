@@ -1,332 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#1B1D2B"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:background="#121212">
 
         <TextView
-            android:text="Informa(km/h)"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
+            android:id="@+id/tv_caida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Eje Y (valores de velocidad) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:text="100"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:text="80"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"/>
-
-                <TextView
-                    android:text="60"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"/>
-
-                <TextView
-                    android:text="40"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"/>
-
-                <TextView
-                    android:text="20"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"/>
-            </LinearLayout>
-
-            <!-- Gráfico de barras -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_weight="4"
-                android:orientation="horizontal"
-                android:gravity="bottom|center"
-                android:weightSum="4"
-                android:padding="8dp">
-
-                <!-- Barra Enero-Marzo -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="40dp"
-                        android:layout_height="100dp"
-                        android:background="#FFFFFF"
-                        android:layout_gravity="center" />
-
-                    <TextView
-                        android:text="Enero - Marzo"
-                        android:textColor="@android:color/white"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <!-- Barra Abril-Junio -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="40dp"
-                        android:layout_height="80dp"
-                        android:background="#FFFFFF"
-                        android:layout_gravity="center" />
-
-                    <TextView
-                        android:text="Abril - Junio"
-                        android:textColor="@android:color/white"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <!-- Barra Julio-Septiembre -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:background="#FFFFFF"
-                        android:layout_gravity="center" />
-
-                    <TextView
-                        android:text="Julio - Septiembre"
-                        android:textColor="@android:color/white"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <!-- Barra Octubre-Diciembre -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="#FFFFFF"
-                        android:layout_gravity="center" />
-
-                    <TextView
-                        android:text="Octubre - Diciembre"
-                        android:textColor="@android:color/white"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Sección inferior: indicadores circulares -->
-        <TextView
-            android:text="General"
-            android:textColor="@android:color/white"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
+            android:text="Promedio CAIDA:" />
+
+        <TextView
+            android:id="@+id/tv_velocidad_superada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Promedio VELOCIDAD SUPERADA:" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_posible_caida"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:weightSum="3">
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Promedio POSIBLE CAIDA:" />
 
-            <!-- Indicador 1 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_height="wrap_content">
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:background="#1E2733"
+            android:padding="8dp"
+            android:elevation="6dp" />
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+        <com.github.mikephil.charting.charts.ScatterChart
+            android:id="@+id/scatterChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            />
 
-                    <ProgressBar
-                        android:id="@+id/progress1"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:progress="53"
-                        android:max="100"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:indeterminate="false"
-                        android:progressDrawable="@drawable/circular_progress_red"
-                        android:rotation="270"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="53%"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-
-                <TextView
-                    android:text="Velocidad Estandar"
-                    android:textColor="@android:color/white"
-                    android:gravity="center"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
-
-            <!-- Indicador 2 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_height="wrap_content">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ProgressBar
-                        android:id="@+id/progress2"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:progress="17"
-                        android:max="100"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:indeterminate="false"
-                        android:progressDrawable="@drawable/circular_progress_blue"
-                        android:rotation="270"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="17%"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-
-                <TextView
-                    android:text="Paradas/Descansos"
-                    android:textColor="@android:color/white"
-                    android:gravity="center"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
-
-            <!-- Indicador 3 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_height="wrap_content">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ProgressBar
-                        android:id="@+id/progress3"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:progress="30"
-                        android:max="100"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:indeterminate="false"
-                        android:progressDrawable="@drawable/circular_progress_yellow"
-                        android:rotation="270"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="30%"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-
-                <TextView
-                    android:text="Accidentes"
-                    android:textColor="@android:color/white"
-                    android:gravity="center"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
